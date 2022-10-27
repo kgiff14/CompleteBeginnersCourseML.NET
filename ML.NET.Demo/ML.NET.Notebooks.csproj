@@ -9,7 +9,6 @@
 
   <ItemGroup>
     <Folder Include="Assets\" />
-    <Folder Include="Notebooks\Classification\" />
     <Folder Include="Notebooks\DecisionTrees\" />
     <Folder Include="Notebooks\Clustering\" />
     <Folder Include="Notebooks\ImageDetection\" />

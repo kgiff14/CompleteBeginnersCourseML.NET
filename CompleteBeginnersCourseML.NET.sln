@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ML.NET.Notebooks", "ML.NET.Demo\ML.NET.Notebooks.csproj", "{08C7EF6D-40A3-425A-8E7B-3E6D27C55D65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ML.NET.Notebooks", "ML.NET.Demo\ML.NET.Notebooks.csproj", "{08C7EF6D-40A3-425A-8E7B-3E6D27C55D65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinearRegression", "LinearRegression\LinearRegression.csproj", "{B71EBE0B-A942-496A-B1F1-2EADDEF4ABD1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinearRegression", "LinearRegression\LinearRegression.csproj", "{B71EBE0B-A942-496A-B1F1-2EADDEF4ABD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryClassification", "BinaryClassification\BinaryClassification.csproj", "{8C57C041-12EF-4358-AEAC-15A6F73B29EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{B71EBE0B-A942-496A-B1F1-2EADDEF4ABD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B71EBE0B-A942-496A-B1F1-2EADDEF4ABD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B71EBE0B-A942-496A-B1F1-2EADDEF4ABD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C57C041-12EF-4358-AEAC-15A6F73B29EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C57C041-12EF-4358-AEAC-15A6F73B29EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C57C041-12EF-4358-AEAC-15A6F73B29EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C57C041-12EF-4358-AEAC-15A6F73B29EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
