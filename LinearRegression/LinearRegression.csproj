@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Assets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML" Version="1.7.1" />
+    <PackageReference Include="Microsoft.ML.FastTree" Version="1.7.1" />
+  </ItemGroup>
+  <ItemGroup Label="Regression">
+    <None Include="Regression.consumption.cs">
+      <DependentUpon>Regression.mbconfig</DependentUpon>
+    </None>
+    <None Include="Regression.training.cs">
+      <DependentUpon>Regression.mbconfig</DependentUpon>
+    </None>
+    <None Include="Regression.zip">
+      <DependentUpon>Regression.mbconfig</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

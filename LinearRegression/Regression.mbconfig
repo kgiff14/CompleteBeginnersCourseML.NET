@@ -1,0 +1,171 @@
+﻿{
+  "TrainingTime": 10,
+  "Scenario": "Regression",
+  "DataSource": {
+    "Type": "TabularFile",
+    "Version": 1,
+    "FilePath": "C:\\Users\\korde\\source\\repos\\CompleteBeginnersCourseML.NET\\LinearRegression\\Assets\\Real estate.csv",
+    "Delimiter": ",",
+    "DecimalMarker": ".",
+    "HasHeader": true,
+    "ColumnProperties": [
+      {
+        "ColumnName": "No",
+        "ColumnPurpose": "Ignore",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "X1 transaction date",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "X2 house age",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "X3 distance to the nearest MRT station",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "X4 number of convenience stores",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "X5 latitude",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "X6 longitude",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "Y house price of unit area",
+        "ColumnPurpose": "Label",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      }
+    ]
+  },
+  "Environment": {
+    "Type": "LocalCPU",
+    "Version": 1
+  },
+  "RunHistory": {
+    "Version": 1,
+    "Type": "Result",
+    "Trials": [
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "FastForestRegression",
+        "Score": 0.8474505428626582,
+        "RuntimeInSeconds": 0.033
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "FastForestRegression",
+        "Score": 0.84519136843207021,
+        "RuntimeInSeconds": 0.022
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "FastForestRegression",
+        "Score": 0.84127041232318045,
+        "RuntimeInSeconds": 0.08
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "FastForestRegression",
+        "Score": 0.83736185298530941,
+        "RuntimeInSeconds": 0.061
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "FastForestRegression",
+        "Score": 0.83568385921384036,
+        "RuntimeInSeconds": 0.037
+      }
+    ],
+    "Pipeline": {
+      "parameter": {
+        "0": {
+          "OutputColumnNames": [
+            "X1 transaction date",
+            "X2 house age",
+            "X3 distance to the nearest MRT station",
+            "X4 number of convenience stores",
+            "X5 latitude",
+            "X6 longitude"
+          ],
+          "InputColumnNames": [
+            "X1 transaction date",
+            "X2 house age",
+            "X3 distance to the nearest MRT station",
+            "X4 number of convenience stores",
+            "X5 latitude",
+            "X6 longitude"
+          ]
+        },
+        "1": {
+          "InputColumnNames": [
+            "X1 transaction date",
+            "X2 house age",
+            "X3 distance to the nearest MRT station",
+            "X4 number of convenience stores",
+            "X5 latitude",
+            "X6 longitude"
+          ],
+          "OutputColumnName": "Features"
+        },
+        "2": {
+          "NumberOfTrees": 10,
+          "NumberOfLeaves": 4,
+          "FeatureFraction": 0.848451853,
+          "LabelColumnName": "Y house price of unit area",
+          "FeatureColumnName": "Features"
+        }
+      },
+      "estimators": [
+        "ReplaceMissingValues",
+        "Concatenate",
+        "FastForestRegression"
+      ]
+    },
+    "MetricName": "RSquared"
+  },
+  "Type": "TrainingConfig",
+  "Version": 2
+}
