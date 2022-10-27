@@ -1,0 +1,200 @@
+﻿{
+  "TrainingTime": 30,
+  "Scenario": "Classification",
+  "DataSource": {
+    "Type": "TabularFile",
+    "Version": 1,
+    "FilePath": "C:\\Users\\korde\\source\\repos\\CompleteBeginnersCourseML.NET\\MulticlassClassification\\Assets\\diamond.csv",
+    "Delimiter": ",",
+    "DecimalMarker": ".",
+    "HasHeader": true,
+    "ColumnProperties": [
+      {
+        "ColumnName": "Carat Weight",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "Cut",
+        "ColumnPurpose": "Label",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "Color",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "Clarity",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "Polish",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "Symmetry",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "Report",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "Price",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      }
+    ]
+  },
+  "Environment": {
+    "Type": "LocalCPU",
+    "Version": 1
+  },
+  "RunHistory": {
+    "Version": 1,
+    "Type": "Result",
+    "Trials": [
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "FastTreeOva",
+        "Score": 0.47914862914862921,
+        "RuntimeInSeconds": 1.043
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "FastTreeOva",
+        "Score": 0.45375180375180368,
+        "RuntimeInSeconds": 11.912
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "LightGbmMulti",
+        "Score": 0.45227272727272727,
+        "RuntimeInSeconds": 0.491
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "FastForestOva",
+        "Score": 0.40018037518037514,
+        "RuntimeInSeconds": 0.743
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "LightGbmMulti",
+        "Score": 0.3959235209235209,
+        "RuntimeInSeconds": 0.137
+      }
+    ],
+    "Pipeline": {
+      "parameter": {
+        "0": {
+          "OutputColumnNames": [
+            "Polish",
+            "Symmetry",
+            "Report"
+          ],
+          "InputColumnNames": [
+            "Polish",
+            "Symmetry",
+            "Report"
+          ]
+        },
+        "1": {
+          "OutputColumnNames": [
+            "Carat Weight",
+            "Price"
+          ],
+          "InputColumnNames": [
+            "Carat Weight",
+            "Price"
+          ]
+        },
+        "2": {
+          "InputColumnName": "Color",
+          "OutputColumnName": "Color"
+        },
+        "3": {
+          "InputColumnName": "Clarity",
+          "OutputColumnName": "Clarity"
+        },
+        "4": {
+          "InputColumnNames": [
+            "Polish",
+            "Symmetry",
+            "Report",
+            "Carat Weight",
+            "Price",
+            "Color",
+            "Clarity"
+          ],
+          "OutputColumnName": "Features"
+        },
+        "5": {
+          "OutputColumnName": "Cut",
+          "InputColumnName": "Cut"
+        },
+        "6": {
+          "NumberOfLeaves": 21,
+          "MinimumExampleCountPerLeaf": 20,
+          "NumberOfTrees": 81,
+          "MaximumBinCountPerFeature": 164,
+          "FeatureFraction": 0.99363928946628577,
+          "LearningRate": 0.99999977667298645,
+          "LabelColumnName": "Cut",
+          "FeatureColumnName": "Features"
+        },
+        "7": {
+          "OutputColumnName": "PredictedLabel",
+          "InputColumnName": "PredictedLabel"
+        }
+      },
+      "estimators": [
+        "OneHotEncoding",
+        "ReplaceMissingValues",
+        "FeaturizeText",
+        "FeaturizeText",
+        "Concatenate",
+        "MapValueToKey",
+        "FastTreeOva",
+        "MapKeyToValue"
+      ]
+    },
+    "MetricName": "MacroAccuracy"
+  },
+  "Type": "TrainingConfig",
+  "Version": 2
+}

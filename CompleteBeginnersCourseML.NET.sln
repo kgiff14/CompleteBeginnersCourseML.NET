@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinearRegression", "LinearR
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryClassification", "BinaryClassification\BinaryClassification.csproj", "{8C57C041-12EF-4358-AEAC-15A6F73B29EB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MulticlassClassification", "MulticlassClassification\MulticlassClassification.csproj", "{BC0CFC78-8148-4B23-B563-EB4D701895DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{8C57C041-12EF-4358-AEAC-15A6F73B29EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C57C041-12EF-4358-AEAC-15A6F73B29EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C57C041-12EF-4358-AEAC-15A6F73B29EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC0CFC78-8148-4B23-B563-EB4D701895DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC0CFC78-8148-4B23-B563-EB4D701895DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC0CFC78-8148-4B23-B563-EB4D701895DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC0CFC78-8148-4B23-B563-EB4D701895DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
