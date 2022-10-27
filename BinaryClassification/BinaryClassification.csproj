@@ -1,14 +1,23 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
   <ItemGroup>
-    <Folder Include="NewFolder\" />
+    <PackageReference Include="Microsoft.ML" Version="1.7.1" />
   </ItemGroup>
-
+  <ItemGroup Label="BClassification">
+    <None Include="BClassification.consumption.cs">
+      <DependentUpon>BClassification.mbconfig</DependentUpon>
+    </None>
+    <None Include="BClassification.training.cs">
+      <DependentUpon>BClassification.mbconfig</DependentUpon>
+    </None>
+    <None Include="BClassification.zip">
+      <DependentUpon>BClassification.mbconfig</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>
