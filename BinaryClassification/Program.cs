@@ -60,7 +60,8 @@ var calibratedTrainers = new List<TrainerAbstract<CalibratedModelParametersBase<
 {
     new LbfgsLogisticRegressionTrainer(),
     new SdcaLogisticRegressionTrainer(),
-    new SgdCalibratedClassificationTrainer()
+    new SgdCalibratedClassificationTrainer(),
+    new SymbolicSgdLogisticRegressionTrainer()
 };
 
 calibratedTrainers.ForEach(x => predictor.Predict(newSample, x));

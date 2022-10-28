@@ -47,6 +47,15 @@ var oneVAllTrainers = new List<TrainerAbstract<OneVersusAllModelParameters>>
 
 oneVAllTrainers.ForEach(x => predictor.Predict(newSample, x));
 
+Console.WriteLine("\n---------------------------------------Pairwise Coupling Classification Trainers-------------------------------------------------");
+
+var pairwiseTrainers = new List<TrainerAbstract<PairwiseCouplingModelParameters>>
+{
+    new PairwiseTrainer()
+};
+
+pairwiseTrainers.ForEach(x => predictor.Predict(newSample, x));
+
 Console.WriteLine("\n---------------------------------------Non Calibrated Classification Trainers-------------------------------------------------");
 
 var nonCalibratedTrainers = new List<TrainerAbstract<LinearMulticlassModelParameters>>
@@ -73,4 +82,4 @@ var sampleData = new MClassification.ModelInput()
 //Load model and predict output
 var result = MClassification.Predict(sampleData);
 
-Console.WriteLine($"Cut: {result.Cut.ToString()}");
+Console.WriteLine($"Cut: {result.PredictedLabel}");

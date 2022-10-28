@@ -7,6 +7,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.ML" Version="1.7.1" />
+    <PackageReference Include="Microsoft.ML.Mkl.Components" Version="1.7.1" />
   </ItemGroup>
   <ItemGroup Label="BClassification">
     <None Include="BClassification.consumption.cs">

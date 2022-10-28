@@ -4,6 +4,7 @@ using DecisionTreeRegression.AppLogic.Abstracts;
 using DecisionTreeRegression.AppLogic.Implementations;
 using DecisionTreeRegression.Models;
 using Microsoft.ML.Trainers.FastTree;
+using Microsoft.ML.Trainers.LightGbm;
 
 var predictor = new Predictor();
 
@@ -37,6 +38,15 @@ var fastTreeTrainers = new List<TrainerAbstract<FastTreeRegressionModelParameter
 
 fastTreeTrainers.ForEach(x => predictor.Predict(newSample, x));
 
+Console.WriteLine("\n---------------------------------------Fast Forest Trainers-------------------------------------------------");
+
+var fastForstTrainers = new List<TrainerAbstract<FastForestRegressionModelParameters>>
+{
+    new FastForestTrainer(leaves, trees)
+};
+
+fastForstTrainers.ForEach(x => predictor.Predict(newSample, x));
+
 Console.WriteLine("\n---------------------------------------Fast Tree Tweedie Trainers-------------------------------------------------");
 
 var fastTreeTweedieTrainers = new List<TrainerAbstract<FastTreeTweedieModelParameters>>
@@ -54,6 +64,15 @@ var gamTrainers = new List<TrainerAbstract<GamRegressionModelParameters>>
 };
 
 gamTrainers.ForEach(x => predictor.Predict(newSample, x));
+
+Console.WriteLine("\n---------------------------------------Light Gbm Trainers-------------------------------------------------");
+
+var gbmTrainers = new List<TrainerAbstract<LightGbmRegressionModelParameters>>
+{
+    new LightGbmTrainer()
+};
+
+gbmTrainers.ForEach(x => predictor.Predict(newSample, x));
 
 Console.WriteLine("\n-----------------AutoML------------------\n");
 
