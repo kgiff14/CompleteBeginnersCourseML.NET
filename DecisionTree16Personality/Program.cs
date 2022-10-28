@@ -6,70 +6,9 @@ using DecisionTree16Personality.Models;
 using Microsoft.ML.Trainers;
 
 var predictor = new Predictor();
+var questionaire = new Questionaire();
 
-var newSample = new PersonalityInput
-{
-    Question1 = 0f,
-    Question2 = 0f,
-    Question3 = 0f,
-    Question4 = 0f,
-    Question5 = 0f,
-    Question6 = 1f,
-    Question7 = 1f,
-    Question8 = 0f,
-    Question9 = 0f,
-    Question10 = 0f,
-    Question11 = 0f,
-    Question12 = 1f,
-    Question13 = 1f,
-    Question14 = 0f,
-    Question15 = 1f,
-    Question16 = -1f,
-    Question17 = -1f,
-    Question18 = 0f,
-    Question19 = 0f,
-    Question20 = 0f,
-    Question21 = 0f,
-    Question22 = 0f,
-    Question23 = 0f,
-    Question24 = 0f,
-    Question25 = 0f,
-    Question26 = 0f,
-    Question27 = 0f,
-    Question28 = 0f,
-    Question29 = 0f,
-    Question30 = -1f,
-    Question31 = 0f,
-    Question32 = 0f,
-    Question33 = 0f,
-    Question34 = 0f,
-    Question35 = 0f,
-    Question36 = -1f,
-    Question37 = 0f,
-    Question38 = -1f,
-    Question39 = 1f,
-    Question40 = -1f,
-    Question41 = 0f,
-    Question42 = 0f,
-    Question43 = 1f,
-    Question44 = 0f,
-    Question45 = -1f,
-    Question46 = 0f,
-    Question47 = 0f,
-    Question48 = 0f,
-    Question49 = 0f,
-    Question50 = 0f,
-    Question51 = 0f,
-    Question52 = 0f,
-    Question53 = 0f,
-    Question54 = 0f,
-    Question55 = -1f,
-    Question56 = 0f,
-    Question57 = 0f,
-    Question58 = 0f,
-    Question59 = 0f,
-    Question60 = 0f
-};
+PersonalityInput newSample = questionaire.GetPersonalityInput();
 
 Console.WriteLine("\n---------------------------------------Light Gbm Classification Trainers-------------------------------------------------");
 
