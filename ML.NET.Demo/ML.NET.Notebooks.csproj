@@ -8,7 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Notebooks\DecisionTrees\" />
     <Folder Include="Notebooks\Clustering\" />
     <Folder Include="Notebooks\ImageDetection\" />
     <Folder Include="Notebooks\SVM\" />
