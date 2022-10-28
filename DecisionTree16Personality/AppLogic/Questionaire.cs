@@ -82,6 +82,7 @@ internal class Questionaire
             if (question is null || !index)
             {
                 Console.WriteLine("Unable to grab question");
+
                 continue;
             }
 
@@ -140,7 +141,7 @@ internal class Questionaire
         {
             Console.WriteLine("  Please enter a value from -3 to 3");
 
-                return false;
+            return false;
         }
 
     }
