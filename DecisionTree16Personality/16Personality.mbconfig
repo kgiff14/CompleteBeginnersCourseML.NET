@@ -1,0 +1,783 @@
+﻿{
+  "TrainingTime": 30,
+  "Scenario": "Classification",
+  "DataSource": {
+    "Type": "TabularFile",
+    "Version": 1,
+    "FilePath": "C:\\Users\\korde\\source\\repos\\CompleteBeginnersCourseML.NET\\DecisionTree16Personality\\Assets\\16P.csv",
+    "Delimiter": ",",
+    "DecimalMarker": ".",
+    "HasHeader": true,
+    "ColumnProperties": [
+      {
+        "ColumnName": "Response Id",
+        "ColumnPurpose": "Ignore",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You regularly make new friends.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You spend a lot of your free time exploring various random topics that pique your interest",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "Seeing other people cry can easily make you feel like you want to cry too",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You often make a backup plan for a backup plan.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You usually stay calm, even under a lot of pressure",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "At social events, you rarely try to introduce yourself to new people and mostly talk to the ones you already know",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You prefer to completely finish one project before starting another.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You are very sentimental.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You like to use organizing tools like schedules and lists.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "Even a small mistake can cause you to doubt your overall abilities and knowledge.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You feel comfortable just walking up to someone you find interesting and striking up a conversation.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You are not too interested in discussing various interpretations and analyses of creative works.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You are more inclined to follow your head than your heart.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You usually prefer just doing what you feel like at any given moment instead of planning a particular daily routine.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You rarely worry about whether you make a good impression on people you meet.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You enjoy participating in group activities.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You like books and movies that make you come up with your own interpretation of the ending.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "Your happiness comes more from helping others accomplish things than your own accomplishments.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You are interested in so many things that you find it difficult to choose what to try next.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You are prone to worrying that things will take a turn for the worse.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You avoid leadership roles in group settings.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You are definitely not an artistic type of person.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You think the world would be a better place if people relied more on rationality and less on their feelings.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You prefer to do your chores before allowing yourself to relax.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You enjoy watching people argue.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You tend to avoid drawing attention to yourself.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "Your mood can change very quickly.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You lose patience with people who are not as efficient as you.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You often end up doing things at the last possible moment.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You have always been fascinated by the question of what, if anything, happens after death.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You usually prefer to be around others rather than on your own.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You become bored or lose interest when the discussion gets highly theoretical.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You find it easy to empathize with a person whose experiences are very different from yours.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You usually postpone finalizing decisions for as long as possible.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You rarely second-guess the choices that you have made.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "After a long and exhausting week, a lively social event is just what you need.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You enjoy going to art museums.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You often have a hard time understanding other people�s feelings.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You like to have a to-do list for each day.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You rarely feel insecure.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You avoid making phone calls.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You often spend a lot of time trying to understand views that are very different from your own.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "In your social circle, you are often the one who contacts your friends and initiates activities.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "If your plans are interrupted, your top priority is to get back on track as soon as possible.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You are still bothered by mistakes that you made a long time ago.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You rarely contemplate the reasons for human existence or the meaning of life.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "Your emotions control you more than you control them.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You take great care not to make people look bad, even when it is completely their fault.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "Your personal work style is closer to spontaneous bursts of energy than organized and consistent efforts.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "When someone thinks highly of you, you wonder how long it will take them to feel disappointed in you.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You would love a job that requires you to work alone most of the time.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You believe that pondering abstract philosophical questions is a waste of time.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You feel more drawn to places with busy, bustling atmospheres than quiet, intimate places.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You know at first glance how someone is feeling.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You often feel overwhelmed.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You complete things methodically without skipping over any steps.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You are very intrigued by things labeled as controversial.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You would pass along a good opportunity if you thought someone else needed it more.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You struggle with deadlines.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "You feel confident that things will work out for you.",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      },
+      {
+        "ColumnName": "Personality",
+        "ColumnPurpose": "Label",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 2
+      }
+    ]
+  },
+  "Environment": {
+    "Type": "LocalCPU",
+    "Version": 1
+  },
+  "RunHistory": {
+    "Version": 1,
+    "Type": "Result",
+    "Trials": [
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "LbfgsMaximumEntropyMulti",
+        "Score": 0.914153715251052,
+        "RuntimeInSeconds": 1.054
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "LbfgsLogisticRegressionOva",
+        "Score": 0.90985797072726526,
+        "RuntimeInSeconds": 1.478
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "SdcaMaximumEntropyMulti",
+        "Score": 0.7494221503576356,
+        "RuntimeInSeconds": 2.857
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "FastForestOva",
+        "Score": 0.65513538492267709,
+        "RuntimeInSeconds": 5.842
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "LightGbmMulti",
+        "Score": 0.60264453485049374,
+        "RuntimeInSeconds": 0.382
+      }
+    ],
+    "Pipeline": {
+      "parameter": {
+        "0": {
+          "OutputColumnNames": [
+            "You regularly make new friends.",
+            "You spend a lot of your free time exploring various random topics that pique your interest",
+            "Seeing other people cry can easily make you feel like you want to cry too",
+            "You often make a backup plan for a backup plan.",
+            "You usually stay calm, even under a lot of pressure",
+            "At social events, you rarely try to introduce yourself to new people and mostly talk to the ones you already know",
+            "You prefer to completely finish one project before starting another.",
+            "You are very sentimental.",
+            "You like to use organizing tools like schedules and lists.",
+            "Even a small mistake can cause you to doubt your overall abilities and knowledge.",
+            "You feel comfortable just walking up to someone you find interesting and striking up a conversation.",
+            "You are not too interested in discussing various interpretations and analyses of creative works.",
+            "You are more inclined to follow your head than your heart.",
+            "You usually prefer just doing what you feel like at any given moment instead of planning a particular daily routine.",
+            "You rarely worry about whether you make a good impression on people you meet.",
+            "You enjoy participating in group activities.",
+            "You like books and movies that make you come up with your own interpretation of the ending.",
+            "Your happiness comes more from helping others accomplish things than your own accomplishments.",
+            "You are interested in so many things that you find it difficult to choose what to try next.",
+            "You are prone to worrying that things will take a turn for the worse.",
+            "You avoid leadership roles in group settings.",
+            "You are definitely not an artistic type of person.",
+            "You think the world would be a better place if people relied more on rationality and less on their feelings.",
+            "You prefer to do your chores before allowing yourself to relax.",
+            "You enjoy watching people argue.",
+            "You tend to avoid drawing attention to yourself.",
+            "Your mood can change very quickly.",
+            "You lose patience with people who are not as efficient as you.",
+            "You often end up doing things at the last possible moment.",
+            "You have always been fascinated by the question of what, if anything, happens after death.",
+            "You usually prefer to be around others rather than on your own.",
+            "You become bored or lose interest when the discussion gets highly theoretical.",
+            "You find it easy to empathize with a person whose experiences are very different from yours.",
+            "You usually postpone finalizing decisions for as long as possible.",
+            "You rarely second-guess the choices that you have made.",
+            "After a long and exhausting week, a lively social event is just what you need.",
+            "You enjoy going to art museums.",
+            "You often have a hard time understanding other people�s feelings.",
+            "You like to have a to-do list for each day.",
+            "You rarely feel insecure.",
+            "You avoid making phone calls.",
+            "You often spend a lot of time trying to understand views that are very different from your own.",
+            "In your social circle, you are often the one who contacts your friends and initiates activities.",
+            "If your plans are interrupted, your top priority is to get back on track as soon as possible.",
+            "You are still bothered by mistakes that you made a long time ago.",
+            "You rarely contemplate the reasons for human existence or the meaning of life.",
+            "Your emotions control you more than you control them.",
+            "You take great care not to make people look bad, even when it is completely their fault.",
+            "Your personal work style is closer to spontaneous bursts of energy than organized and consistent efforts.",
+            "When someone thinks highly of you, you wonder how long it will take them to feel disappointed in you.",
+            "You would love a job that requires you to work alone most of the time.",
+            "You believe that pondering abstract philosophical questions is a waste of time.",
+            "You feel more drawn to places with busy, bustling atmospheres than quiet, intimate places.",
+            "You know at first glance how someone is feeling.",
+            "You often feel overwhelmed.",
+            "You complete things methodically without skipping over any steps.",
+            "You are very intrigued by things labeled as controversial.",
+            "You would pass along a good opportunity if you thought someone else needed it more.",
+            "You struggle with deadlines.",
+            "You feel confident that things will work out for you."
+          ],
+          "InputColumnNames": [
+            "You regularly make new friends.",
+            "You spend a lot of your free time exploring various random topics that pique your interest",
+            "Seeing other people cry can easily make you feel like you want to cry too",
+            "You often make a backup plan for a backup plan.",
+            "You usually stay calm, even under a lot of pressure",
+            "At social events, you rarely try to introduce yourself to new people and mostly talk to the ones you already know",
+            "You prefer to completely finish one project before starting another.",
+            "You are very sentimental.",
+            "You like to use organizing tools like schedules and lists.",
+            "Even a small mistake can cause you to doubt your overall abilities and knowledge.",
+            "You feel comfortable just walking up to someone you find interesting and striking up a conversation.",
+            "You are not too interested in discussing various interpretations and analyses of creative works.",
+            "You are more inclined to follow your head than your heart.",
+            "You usually prefer just doing what you feel like at any given moment instead of planning a particular daily routine.",
+            "You rarely worry about whether you make a good impression on people you meet.",
+            "You enjoy participating in group activities.",
+            "You like books and movies that make you come up with your own interpretation of the ending.",
+            "Your happiness comes more from helping others accomplish things than your own accomplishments.",
+            "You are interested in so many things that you find it difficult to choose what to try next.",
+            "You are prone to worrying that things will take a turn for the worse.",
+            "You avoid leadership roles in group settings.",
+            "You are definitely not an artistic type of person.",
+            "You think the world would be a better place if people relied more on rationality and less on their feelings.",
+            "You prefer to do your chores before allowing yourself to relax.",
+            "You enjoy watching people argue.",
+            "You tend to avoid drawing attention to yourself.",
+            "Your mood can change very quickly.",
+            "You lose patience with people who are not as efficient as you.",
+            "You often end up doing things at the last possible moment.",
+            "You have always been fascinated by the question of what, if anything, happens after death.",
+            "You usually prefer to be around others rather than on your own.",
+            "You become bored or lose interest when the discussion gets highly theoretical.",
+            "You find it easy to empathize with a person whose experiences are very different from yours.",
+            "You usually postpone finalizing decisions for as long as possible.",
+            "You rarely second-guess the choices that you have made.",
+            "After a long and exhausting week, a lively social event is just what you need.",
+            "You enjoy going to art museums.",
+            "You often have a hard time understanding other people�s feelings.",
+            "You like to have a to-do list for each day.",
+            "You rarely feel insecure.",
+            "You avoid making phone calls.",
+            "You often spend a lot of time trying to understand views that are very different from your own.",
+            "In your social circle, you are often the one who contacts your friends and initiates activities.",
+            "If your plans are interrupted, your top priority is to get back on track as soon as possible.",
+            "You are still bothered by mistakes that you made a long time ago.",
+            "You rarely contemplate the reasons for human existence or the meaning of life.",
+            "Your emotions control you more than you control them.",
+            "You take great care not to make people look bad, even when it is completely their fault.",
+            "Your personal work style is closer to spontaneous bursts of energy than organized and consistent efforts.",
+            "When someone thinks highly of you, you wonder how long it will take them to feel disappointed in you.",
+            "You would love a job that requires you to work alone most of the time.",
+            "You believe that pondering abstract philosophical questions is a waste of time.",
+            "You feel more drawn to places with busy, bustling atmospheres than quiet, intimate places.",
+            "You know at first glance how someone is feeling.",
+            "You often feel overwhelmed.",
+            "You complete things methodically without skipping over any steps.",
+            "You are very intrigued by things labeled as controversial.",
+            "You would pass along a good opportunity if you thought someone else needed it more.",
+            "You struggle with deadlines.",
+            "You feel confident that things will work out for you."
+          ]
+        },
+        "1": {
+          "InputColumnNames": [
+            "You regularly make new friends.",
+            "You spend a lot of your free time exploring various random topics that pique your interest",
+            "Seeing other people cry can easily make you feel like you want to cry too",
+            "You often make a backup plan for a backup plan.",
+            "You usually stay calm, even under a lot of pressure",
+            "At social events, you rarely try to introduce yourself to new people and mostly talk to the ones you already know",
+            "You prefer to completely finish one project before starting another.",
+            "You are very sentimental.",
+            "You like to use organizing tools like schedules and lists.",
+            "Even a small mistake can cause you to doubt your overall abilities and knowledge.",
+            "You feel comfortable just walking up to someone you find interesting and striking up a conversation.",
+            "You are not too interested in discussing various interpretations and analyses of creative works.",
+            "You are more inclined to follow your head than your heart.",
+            "You usually prefer just doing what you feel like at any given moment instead of planning a particular daily routine.",
+            "You rarely worry about whether you make a good impression on people you meet.",
+            "You enjoy participating in group activities.",
+            "You like books and movies that make you come up with your own interpretation of the ending.",
+            "Your happiness comes more from helping others accomplish things than your own accomplishments.",
+            "You are interested in so many things that you find it difficult to choose what to try next.",
+            "You are prone to worrying that things will take a turn for the worse.",
+            "You avoid leadership roles in group settings.",
+            "You are definitely not an artistic type of person.",
+            "You think the world would be a better place if people relied more on rationality and less on their feelings.",
+            "You prefer to do your chores before allowing yourself to relax.",
+            "You enjoy watching people argue.",
+            "You tend to avoid drawing attention to yourself.",
+            "Your mood can change very quickly.",
+            "You lose patience with people who are not as efficient as you.",
+            "You often end up doing things at the last possible moment.",
+            "You have always been fascinated by the question of what, if anything, happens after death.",
+            "You usually prefer to be around others rather than on your own.",
+            "You become bored or lose interest when the discussion gets highly theoretical.",
+            "You find it easy to empathize with a person whose experiences are very different from yours.",
+            "You usually postpone finalizing decisions for as long as possible.",
+            "You rarely second-guess the choices that you have made.",
+            "After a long and exhausting week, a lively social event is just what you need.",
+            "You enjoy going to art museums.",
+            "You often have a hard time understanding other people�s feelings.",
+            "You like to have a to-do list for each day.",
+            "You rarely feel insecure.",
+            "You avoid making phone calls.",
+            "You often spend a lot of time trying to understand views that are very different from your own.",
+            "In your social circle, you are often the one who contacts your friends and initiates activities.",
+            "If your plans are interrupted, your top priority is to get back on track as soon as possible.",
+            "You are still bothered by mistakes that you made a long time ago.",
+            "You rarely contemplate the reasons for human existence or the meaning of life.",
+            "Your emotions control you more than you control them.",
+            "You take great care not to make people look bad, even when it is completely their fault.",
+            "Your personal work style is closer to spontaneous bursts of energy than organized and consistent efforts.",
+            "When someone thinks highly of you, you wonder how long it will take them to feel disappointed in you.",
+            "You would love a job that requires you to work alone most of the time.",
+            "You believe that pondering abstract philosophical questions is a waste of time.",
+            "You feel more drawn to places with busy, bustling atmospheres than quiet, intimate places.",
+            "You know at first glance how someone is feeling.",
+            "You often feel overwhelmed.",
+            "You complete things methodically without skipping over any steps.",
+            "You are very intrigued by things labeled as controversial.",
+            "You would pass along a good opportunity if you thought someone else needed it more.",
+            "You struggle with deadlines.",
+            "You feel confident that things will work out for you."
+          ],
+          "OutputColumnName": "Features"
+        },
+        "2": {
+          "OutputColumnName": "Personality",
+          "InputColumnName": "Personality"
+        },
+        "3": {
+          "OutputColumnNames": [
+            "Features"
+          ],
+          "InputColumnNames": [
+            "Features"
+          ]
+        },
+        "4": {
+          "L1Regularization": 1.0,
+          "L2Regularization": 1.0,
+          "LabelColumnName": "Personality",
+          "FeatureColumnName": "Features"
+        },
+        "5": {
+          "OutputColumnName": "PredictedLabel",
+          "InputColumnName": "PredictedLabel"
+        }
+      },
+      "estimators": [
+        "ReplaceMissingValues",
+        "Concatenate",
+        "MapValueToKey",
+        "NormalizeMinMax",
+        "LbfgsMaximumEntropyMulti",
+        "MapKeyToValue"
+      ]
+    },
+    "MetricName": "MacroAccuracy"
+  },
+  "Type": "TrainingConfig",
+  "Version": 2
+}
