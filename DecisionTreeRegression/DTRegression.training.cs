@@ -37,7 +37,7 @@ namespace DecisionTreeRegression
             // Data process configuration with pipeline data transformations
             var pipeline = mlContext.Transforms.ReplaceMissingValues(new []{new InputOutputColumnPair(@"Relative_Compactness", @"Relative_Compactness"),new InputOutputColumnPair(@"Surface_Area", @"Surface_Area"),new InputOutputColumnPair(@"Wall_Area", @"Wall_Area"),new InputOutputColumnPair(@"Roof_Area", @"Roof_Area"),new InputOutputColumnPair(@"Overall_Height", @"Overall_Height"),new InputOutputColumnPair(@"Orientation", @"Orientation"),new InputOutputColumnPair(@"Glazing_Area", @"Glazing_Area"),new InputOutputColumnPair(@"Glazing_Area_Distribution", @"Glazing_Area_Distribution")})      
                                     .Append(mlContext.Transforms.Concatenate(@"Features", new []{@"Relative_Compactness",@"Surface_Area",@"Wall_Area",@"Roof_Area",@"Overall_Height",@"Orientation",@"Glazing_Area",@"Glazing_Area_Distribution"}))      
-                                    .Append(mlContext.Regression.Trainers.FastTree(new FastTreeRegressionTrainer.Options(){NumberOfLeaves=11,MinimumExampleCountPerLeaf=10,NumberOfTrees=113,MaximumBinCountPerFeature=427,FeatureFraction=0.99999999,LearningRate=0.999999776672986,LabelColumnName=@"Heating_Load",FeatureColumnName=@"Features"}));
+                                    .Append(mlContext.Regression.Trainers.FastTree(new FastTreeRegressionTrainer.Options(){NumberOfLeaves=4316,MinimumExampleCountPerLeaf=2,NumberOfTrees=410,MaximumBinCountPerFeature=1022,FeatureFraction=0.841263870156412,LearningRate=0.999999776672986,LabelColumnName=@"Heating_Load",FeatureColumnName=@"Features"}));
 
             return pipeline;
         }

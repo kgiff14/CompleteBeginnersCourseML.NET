@@ -3,7 +3,6 @@ using DecisionTreeRegression.AppLogic;
 using DecisionTreeRegression.AppLogic.Abstracts;
 using DecisionTreeRegression.AppLogic.Implementations;
 using DecisionTreeRegression.Models;
-using Microsoft.ML.Trainers;
 using Microsoft.ML.Trainers.FastTree;
 
 var predictor = new Predictor();
@@ -20,14 +19,20 @@ var newSample = new EnergyEfficiencyInput
     GlazingAreaDistribution = 0f
 };
 
+Console.WriteLine("Enter how many leaves you desire");
+var leaves = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Enter how many trees you desire");
+var trees = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Enter the learning rate you desire");
+var learningRate = Convert.ToDouble(Console.ReadLine());
+
 Console.WriteLine("\n---------------------------------------Fast Tree Trainers-------------------------------------------------");
 
 var fastTreeTrainers = new List<TrainerAbstract<FastTreeRegressionModelParameters>>
 {
-    new DecisionTreeTrainer(5, 10),
-    new DecisionTreeTrainer(5, 10, 0.5),
-    new DecisionTreeTrainer(10, 2),
-    new DecisionTreeTrainer(10, 2, 0.3)
+    new DecisionTreeTrainer(leaves, trees, learningRate)
 };
 
 fastTreeTrainers.ForEach(x => predictor.Predict(newSample, x));
@@ -36,10 +41,7 @@ Console.WriteLine("\n---------------------------------------Fast Tree Tweedie Tr
 
 var fastTreeTweedieTrainers = new List<TrainerAbstract<FastTreeTweedieModelParameters>>
 {
-    new FastTreeTweedieRegressionTrainer(5, 10),
-    new FastTreeTweedieRegressionTrainer(5, 10, 0.5),
-    new FastTreeTweedieRegressionTrainer(10, 2),
-    new FastTreeTweedieRegressionTrainer(10, 2, 0.3)
+    new FastTreeTweedieRegressionTrainer(leaves, trees, learningRate)
 };
 
 fastTreeTweedieTrainers.ForEach(x => predictor.Predict(newSample, x));
@@ -72,4 +74,4 @@ var sampleData = new DTRegression.ModelInput()
 //Load model and predict output
 var result = DTRegression.Predict(sampleData);
 
-Console.WriteLine($"Heating Load: {result.Heating_Load}");
+Console.WriteLine($"Heating Load: {result.Score}");

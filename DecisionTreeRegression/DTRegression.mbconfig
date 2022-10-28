@@ -103,36 +103,36 @@
         "Version": 0,
         "Type": "Trial",
         "TrainerName": "FastTreeRegression",
-        "Score": 0.99762263094356218,
-        "RuntimeInSeconds": 0.098
+        "Score": 0.99779366812228776,
+        "RuntimeInSeconds": 2.682
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "FastTreeRegression",
+        "Score": 0.99765147845650337,
+        "RuntimeInSeconds": 0.141
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "FastTreeRegression",
+        "Score": 0.99740274866502143,
+        "RuntimeInSeconds": 0.386
       },
       {
         "Version": 0,
         "Type": "Trial",
         "TrainerName": "LightGbmRegression",
-        "Score": 0.99695662971503773,
-        "RuntimeInSeconds": 0.017
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LightGbmRegression",
-        "Score": 0.9966883066066361,
-        "RuntimeInSeconds": 0.01
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LightGbmRegression",
-        "Score": 0.99662533002414455,
-        "RuntimeInSeconds": 0.018
+        "Score": 0.99697895729007924,
+        "RuntimeInSeconds": 0.052
       },
       {
         "Version": 0,
         "Type": "Trial",
         "TrainerName": "FastTreeTweedieRegression",
-        "Score": 0.9966218115607286,
-        "RuntimeInSeconds": 0.072
+        "Score": 0.99693323389524557,
+        "RuntimeInSeconds": 17.44
       }
     ],
     "Pipeline": {
@@ -173,11 +173,11 @@
           "OutputColumnName": "Features"
         },
         "2": {
-          "NumberOfLeaves": 11,
-          "MinimumExampleCountPerLeaf": 10,
-          "NumberOfTrees": 113,
-          "MaximumBinCountPerFeature": 427,
-          "FeatureFraction": 0.99999999,
+          "NumberOfLeaves": 4316,
+          "MinimumExampleCountPerLeaf": 2,
+          "NumberOfTrees": 410,
+          "MaximumBinCountPerFeature": 1022,
+          "FeatureFraction": 0.841263870156412,
           "LearningRate": 0.99999977667298645,
           "LabelColumnName": "Heating_Load",
           "FeatureColumnName": "Features"
