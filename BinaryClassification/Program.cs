@@ -50,6 +50,7 @@ var nonCalibratedTrainers = new List<TrainerAbstract<LinearBinaryModelParameters
     new AveragedPerceptronClassificationTrainer(),
     new SdcaNonCalibratedTrainer(),
     new SgdNonCalibratedClassificationTrainer(),
+    new LinearSVMClassificationTrainer()
 };
 
 nonCalibratedTrainers.ForEach(x => predictor.Predict(newSample, x));
@@ -74,6 +75,15 @@ var priorTrainers = new List<TrainerAbstract<PriorModelParameters>>
 };
 
 priorTrainers.ForEach(x => predictor.Predict(newSample, x));
+
+Console.WriteLine("\n---------------------------------------Local Deep Svm Binary Classification Trainers-------------------------------------------------");
+
+var svmTrainers = new List<TrainerAbstract<LdSvmModelParameters>>
+{
+    new LocalDeepSvmTrainer()
+};
+
+svmTrainers.ForEach(x => predictor.Predict(newSample, x));
 
 Console.WriteLine("\n-----------------AutoML------------------\n");
 
