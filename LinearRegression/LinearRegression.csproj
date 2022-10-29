@@ -11,6 +11,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.ML" Version="1.7.1" />
     <PackageReference Include="Microsoft.ML.FastTree" Version="1.7.1" />
+    <PackageReference Include="Microsoft.ML.Mkl.Components" Version="1.7.1" />
   </ItemGroup>
   <ItemGroup Label="Regression">
     <None Include="Regression.consumption.cs">

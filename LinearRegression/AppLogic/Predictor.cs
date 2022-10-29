@@ -17,7 +17,7 @@ internal class Predictor
 
     internal void Predict<T>(RealEstateInput input, TrainerAbstract<T> trainer) where T : class
     {
-        Console.WriteLine($"\n\n-------------------------------------------------------------------\n\t{trainer}\n-------------------------------------------------------------------\n");
+        Console.WriteLine($"\n\n*************************************************\n*\t{trainer}\n*\n*");
 
         string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory.Split(@"\bin")[0], @"Assets\", "Real estate.csv");
         trainer.Fit(path.ToString());
@@ -30,16 +30,22 @@ internal class Predictor
 
         var predictionEngine = _mlContext.Model.CreatePredictionEngine<RealEstateInput, RealEstateOutput>(_model);
         var prediction = predictionEngine.Predict(input);
-        Console.WriteLine($"\nPrediction: {prediction.Price:#.##}");
+
+        Console.WriteLine($"*");
+        Console.WriteLine($"*-------------------------------");
+        Console.WriteLine($"*");
+        Console.WriteLine($"*\tPrice: {prediction.Price}");
+        Console.WriteLine($"*");
+        Console.WriteLine($"*************************************************");
     }
 
     private void RecordMetrics(RegressionMetrics modelMetrics)
     {
-        Console.WriteLine($"\nMean Absolute Error: {modelMetrics.MeanSquaredError: #.##}");
-        Console.WriteLine($"\nMean Squared Error: {modelMetrics.MeanSquaredError: #.##}");
-        Console.WriteLine($"\nRoot Mean Squared Error: {modelMetrics.RootMeanSquaredError: #.##}");
-        Console.WriteLine($"\nLoss Function: {modelMetrics.LossFunction: #.##}");
-        Console.WriteLine($"\nR Squared: {modelMetrics.RSquared: #.##}");
+        Console.WriteLine($"*\tMean Absolute Error: {modelMetrics.MeanSquaredError: #.##}");
+        Console.WriteLine($"*\tMean Squared Error: {modelMetrics.MeanSquaredError: #.##}");
+        Console.WriteLine($"*\tRoot Mean Squared Error: {modelMetrics.RootMeanSquaredError: #.##}");
+        Console.WriteLine($"*\tLoss Function: {modelMetrics.LossFunction: #.##}");
+        Console.WriteLine($"*\tR Squared: {modelMetrics.RSquared: #.##}");
     }
 
     private void LoadModel<T>(TrainerAbstract<T> trainer) where T : class

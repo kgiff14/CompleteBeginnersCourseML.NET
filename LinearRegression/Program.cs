@@ -19,7 +19,7 @@ var newSample = new RealEstateInput
     Longitude = 121.54024f
 };
 
-Console.WriteLine("\nLinear Regression Trainers-------------------------------------------------");
+Console.WriteLine("\n-------------------------------------------------Linear Regression Trainers-------------------------------------------------");
 
 var linearRegressionTrainers = new List<TrainerAbstract<LinearRegressionModelParameters>>
 {
@@ -29,11 +29,20 @@ var linearRegressionTrainers = new List<TrainerAbstract<LinearRegressionModelPar
 
 linearRegressionTrainers.ForEach(x => predictor.Predict(newSample, x));
 
-Console.WriteLine("\nPoisson Regression Trainers-------------------------------------------------");
+Console.WriteLine("\n-------------------------------------------------Poisson Regression Trainers-------------------------------------------------");
 
 var poissonRegressionTrainers = new List<TrainerAbstract<PoissonRegressionModelParameters>>
 {
     new LbfgsPoissonLinearRegressionTrainer()
+};
+
+poissonRegressionTrainers.ForEach(x => predictor.Predict(newSample, x));
+
+Console.WriteLine("\n-------------------------------------------------Ols Regression Trainers-------------------------------------------------");
+
+var olsRegressionTrainers = new List<TrainerAbstract<OlsModelParameters>>
+{
+    new OlsRegressionTrainer()
 };
 
 poissonRegressionTrainers.ForEach(x => predictor.Predict(newSample, x));
