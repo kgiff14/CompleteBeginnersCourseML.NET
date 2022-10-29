@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forecasting", "Forecasting\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recommendation", "Recommendation\Recommendation.csproj", "{017708A0-4ED1-46D2-A397-73FB546A931E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clustering", "Clustering\Clustering.csproj", "{76B47FC3-5F96-4D2B-AC14-56C562BEBE07}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{017708A0-4ED1-46D2-A397-73FB546A931E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{017708A0-4ED1-46D2-A397-73FB546A931E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{017708A0-4ED1-46D2-A397-73FB546A931E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76B47FC3-5F96-4D2B-AC14-56C562BEBE07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76B47FC3-5F96-4D2B-AC14-56C562BEBE07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76B47FC3-5F96-4D2B-AC14-56C562BEBE07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76B47FC3-5F96-4D2B-AC14-56C562BEBE07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
