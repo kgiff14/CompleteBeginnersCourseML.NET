@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTBinaryClassification", "D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forecasting", "Forecasting\Forecasting.csproj", "{182C6023-4DD1-4CF2-9CC6-F055B1FDE4EE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recommendation", "Recommendation\Recommendation.csproj", "{017708A0-4ED1-46D2-A397-73FB546A931E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{182C6023-4DD1-4CF2-9CC6-F055B1FDE4EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{182C6023-4DD1-4CF2-9CC6-F055B1FDE4EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{182C6023-4DD1-4CF2-9CC6-F055B1FDE4EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{017708A0-4ED1-46D2-A397-73FB546A931E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{017708A0-4ED1-46D2-A397-73FB546A931E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{017708A0-4ED1-46D2-A397-73FB546A931E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{017708A0-4ED1-46D2-A397-73FB546A931E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

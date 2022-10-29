@@ -9,9 +9,7 @@
 
   <ItemGroup>
     <Folder Include="Notebooks\Clustering\" />
-    <Folder Include="Notebooks\ImageDetection\" />
     <Folder Include="Notebooks\SVM\" />
-    <Folder Include="Notebooks\RandomForest\" />
   </ItemGroup>
 
   <ItemGroup>
