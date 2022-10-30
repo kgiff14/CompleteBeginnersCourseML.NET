@@ -5,7 +5,7 @@ namespace ObjectDetection;
 
 class Program
 {
-    private const string _modelPath = @"C:\Users\korde\source\repos\CompleteBeginnersCourseML.NET\ObjectDetection\Assets\Model\yolov4.onnx";
+    private const string _modelPath = @"C:\Users\korde\source\repos\CompleteBeginnersCourseML.NET\ObjectDetection\Assets\Onnx\yolov4.onnx";
     private const string _imageFolder = @"C:\Users\korde\source\repos\CompleteBeginnersCourseML.NET\ObjectDetection\Assets\Images\";
     private const string _imageOutputFolder = @"C:\Users\korde\source\repos\CompleteBeginnersCourseML.NET\ObjectDetection\Assets\Output\";
     private static readonly string[] _classesNames = new string[] {
