@@ -1,4 +1,5 @@
-﻿using ImageClassification.AppLogic;
+﻿using ImageClassification;
+using ImageClassification.AppLogic;
 using ImageClassification.AppLogic.Abstracts;
 using ImageClassification.AppLogic.Implementations;
 using ImageClassification.Models;
@@ -25,3 +26,15 @@ var maxEntropyTrainers = new List<TrainerAbstract<ImageClassificationModelParame
 
 
 maxEntropyTrainers.ForEach(x => predictor.Predict(newSample, x));
+
+//Load sample data
+var imageBytes = File.ReadAllBytes(@"C:\Users\korde\source\repos\CompleteBeginnersCourseML.NET\ImageClassification\Assets\Sports\baseball\001.jpg");
+ImageDetection.ModelInput sampleData = new()
+{
+    ImageSource = imageBytes,
+};
+
+//Load model and predict output
+var result = ImageDetection.Predict(sampleData);
+
+Console.WriteLine($"Prediction: {result.PredictedLabel}");
