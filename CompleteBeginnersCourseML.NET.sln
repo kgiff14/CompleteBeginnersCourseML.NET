@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recommendation", "Recommend
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clustering", "Clustering\Clustering.csproj", "{76B47FC3-5F96-4D2B-AC14-56C562BEBE07}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnomalyDetection", "AnomalyDetection\AnomalyDetection.csproj", "{72DB8EB4-2927-4F00-882D-BA1EDCC869BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{76B47FC3-5F96-4D2B-AC14-56C562BEBE07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76B47FC3-5F96-4D2B-AC14-56C562BEBE07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76B47FC3-5F96-4D2B-AC14-56C562BEBE07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72DB8EB4-2927-4F00-882D-BA1EDCC869BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72DB8EB4-2927-4F00-882D-BA1EDCC869BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72DB8EB4-2927-4F00-882D-BA1EDCC869BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72DB8EB4-2927-4F00-882D-BA1EDCC869BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
