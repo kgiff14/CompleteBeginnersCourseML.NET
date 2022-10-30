@@ -43,7 +43,7 @@ public abstract class TrainerAbstract<T> where T : class
         if (!File.Exists(fileName))
             throw new FileNotFoundException($"{fileName} was not found");
 
-        var dataSet = MlContext.Data.LoadFromTextFile<ReviewInput>(fileName, hasHeader: true);
+        var dataSet = MlContext.Data.LoadFromTextFile<ReviewInput>(fileName);
         DataSplit = MlContext.Data.TrainTestSplit(dataSet, testFraction: 0.3);
     }
 
