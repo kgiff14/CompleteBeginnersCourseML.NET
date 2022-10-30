@@ -7,25 +7,27 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ML.NET.Notebooks", "ML.NET.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinearRegression", "LinearRegression\LinearRegression.csproj", "{B71EBE0B-A942-496A-B1F1-2EADDEF4ABD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryClassification", "BinaryClassification\BinaryClassification.csproj", "{8C57C041-12EF-4358-AEAC-15A6F73B29EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinaryClassification", "BinaryClassification\BinaryClassification.csproj", "{8C57C041-12EF-4358-AEAC-15A6F73B29EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MulticlassClassification", "MulticlassClassification\MulticlassClassification.csproj", "{BC0CFC78-8148-4B23-B563-EB4D701895DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MulticlassClassification", "MulticlassClassification\MulticlassClassification.csproj", "{BC0CFC78-8148-4B23-B563-EB4D701895DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecisionTreeRegression", "DecisionTreeRegression\DecisionTreeRegression.csproj", "{007A3F21-5371-41C3-9E67-B0F4763DCBD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DecisionTreeRegression", "DecisionTreeRegression\DecisionTreeRegression.csproj", "{007A3F21-5371-41C3-9E67-B0F4763DCBD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecisionTree16Personality", "DecisionTree16Personality\DecisionTree16Personality.csproj", "{BFB4151C-FB8D-4100-8E5F-9A62A55D827F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DecisionTree16Personality", "DecisionTree16Personality\DecisionTree16Personality.csproj", "{BFB4151C-FB8D-4100-8E5F-9A62A55D827F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTBinaryClassification", "DTBinaryClassification\DTBinaryClassification.csproj", "{02A03164-DB53-4E23-B000-FEFD6AAF1DC0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTBinaryClassification", "DTBinaryClassification\DTBinaryClassification.csproj", "{02A03164-DB53-4E23-B000-FEFD6AAF1DC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forecasting", "Forecasting\Forecasting.csproj", "{182C6023-4DD1-4CF2-9CC6-F055B1FDE4EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Forecasting", "Forecasting\Forecasting.csproj", "{182C6023-4DD1-4CF2-9CC6-F055B1FDE4EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recommendation", "Recommendation\Recommendation.csproj", "{017708A0-4ED1-46D2-A397-73FB546A931E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recommendation", "Recommendation\Recommendation.csproj", "{017708A0-4ED1-46D2-A397-73FB546A931E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clustering", "Clustering\Clustering.csproj", "{76B47FC3-5F96-4D2B-AC14-56C562BEBE07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clustering", "Clustering\Clustering.csproj", "{76B47FC3-5F96-4D2B-AC14-56C562BEBE07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnomalyDetection", "AnomalyDetection\AnomalyDetection.csproj", "{72DB8EB4-2927-4F00-882D-BA1EDCC869BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnomalyDetection", "AnomalyDetection\AnomalyDetection.csproj", "{72DB8EB4-2927-4F00-882D-BA1EDCC869BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sentiment", "Sentiment\Sentiment.csproj", "{02ABB855-AFBC-4223-A64B-88A720EB12BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sentiment", "Sentiment\Sentiment.csproj", "{02ABB855-AFBC-4223-A64B-88A720EB12BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageClassification", "ImageClassification\ImageClassification.csproj", "{15898564-1676-44CD-8409-2A989F09BD58}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{02ABB855-AFBC-4223-A64B-88A720EB12BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02ABB855-AFBC-4223-A64B-88A720EB12BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02ABB855-AFBC-4223-A64B-88A720EB12BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15898564-1676-44CD-8409-2A989F09BD58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15898564-1676-44CD-8409-2A989F09BD58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15898564-1676-44CD-8409-2A989F09BD58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15898564-1676-44CD-8409-2A989F09BD58}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
